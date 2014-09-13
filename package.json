@@ -1,14 +1,14 @@
 {
-    "name" : "jsonref",
-    "description" : "Get and set values in json by pointer.",
+    "name" : "refpath",
+    "description" : "Get and set values in an object by path.",
     "version" : "0.1.0",
     "author" : "Trevor Livingston <tlivings@gmail.com>",
     "contributors" : [],
     "repository" : {
         "type" : "git",
-        "url" : "git://github.com/tlivings/jsonref.git"
+        "url" : "git://github.com/tlivings/refpath.git"
     },
-    "bugs" : "http://github.com/tlivings/jsonref/issues",
+    "bugs" : "http://github.com/tlivings/refpath/issues",
     "publishConfig" : {
         "registry" : "https://registry.npmjs.org"
     },

@@ -1,7 +1,9 @@
-# jsonref
+# refpath
+
+### usage
 
 ```javascript
-var jsonref = require('jsonref');
+var refpath = require('refpath');
 
 var json = {
     'p1': {
@@ -14,9 +16,9 @@ var json = {
     ]
 };
 
-jsonref.get(json, '#/p1/p1a'); // 'v1a'
-jsonref.get(json, '#/p2/0'); // 0
+refpath.get(json, '#/p1/p1a'); // 'v1a'
+refpath.get(json, '#/p2/0'); // 0
 
-jsonref.set(json, '#/p1/p1a', 'v1b');
-jsonref.get(json, '#/p1/p1a'); // 'v1b'
+refpath.set(json, '#/p1/p1a', 'v1b');
+refpath.get(json, '#/p1/p1a'); // 'v1b'
 ```
