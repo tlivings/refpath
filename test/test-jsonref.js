@@ -5,7 +5,7 @@ var test = require('tape'),
 
 test('test', function (t) {
     t.test('plan', function (t) {
-        t.plan(6);
+        t.plan(7);
 
         var obj = {
             p1: {
@@ -34,6 +34,7 @@ test('test', function (t) {
         t.strictEqual(jsonref.get(obj, '#/p1/p1a'), 'v1a');
         t.strictEqual(jsonref.get(obj, '#/p4/1/p4b'), 'v4b');
         t.ok(!jsonref.get(obj, '#/p1/p1d'), 'should be undefined');
+        t.ok(!jsonref.get(obj, '#/p1/p1a/0'), 'should be undefined');
         jsonref.set(obj, '#/p4/1/p4b', 'v4c')
         t.strictEqual(jsonref.get(obj, '#/p4/1/p4b'), 'v4c');
         jsonref.set(obj, '#/p4/1/p4c', 'v4d');
