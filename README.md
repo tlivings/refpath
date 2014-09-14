@@ -25,7 +25,7 @@ refpath.get(obj, '#/p2/0'); // 0
 
 //Set
 
-refpath.set(obj, '#/p1/p1a', 'v1b');
+refpath.set(obj, '#/p1/p1b', 'v1b');
 
-refpath.get(obj, '#/p1/p1a'); // 'v1b'
+refpath.get(obj, '#/p1/p1b'); // 'v1b'
 ```
