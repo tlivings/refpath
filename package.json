@@ -1,29 +1,30 @@
 {
-    "name" : "refpath",
-    "description" : "Get and set values in an object by path.",
-    "version" : "1.0.0",
-    "author" : "Trevor Livingston <tlivings@gmail.com>",
-    "contributors" : [],
-    "repository" : {
-        "type" : "git",
-        "url" : "git://github.com/tlivings/refpath.git"
-    },
-    "bugs" : "http://github.com/tlivings/refpath/issues",
-    "publishConfig" : {
-        "registry" : "https://registry.npmjs.org"
-    },
-    "engines" : {
-        "node" : "~0.10.22"
-    },
-    "devDependencies" : {
-        "tape" : "~2.4.2",
-        "istanbul" : "~0.2.3",
-        "jshint" : "~2.4.1"
-    },
-    "scripts" : {
-        "test" : "tape test/*.js",
-        "cover" : "istanbul cover tape -- test/*.js",
-        "lint" : "jshint -c .jshintrc lib/*.js"
-    },
-    "main" : "./lib/index"
+  "name": "refpath",
+  "description": "Get and set values in an object by path.",
+  "version": "1.0.0",
+  "author": "Trevor Livingston <tlivings@gmail.com>",
+  "contributors": [],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tlivings/refpath.git"
+  },
+  "bugs": "http://github.com/tlivings/refpath/issues",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "engines": {
+    "node": "~0.10.22"
+  },
+  "devDependencies": {
+    "hammertime": "^0.1.2",
+    "istanbul": "~0.2.3",
+    "jshint": "~2.4.1",
+    "tape": "~2.4.2"
+  },
+  "scripts": {
+    "test": "tape test/*.js",
+    "cover": "istanbul cover tape -- test/*.js",
+    "lint": "jshint -c .jshintrc lib/*.js"
+  },
+  "main": "./lib/index"
 }

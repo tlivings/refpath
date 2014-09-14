@@ -1,11 +1,13 @@
 # refpath
 
-### usage
+Search objects by fragment identifiers commonly used as `$ref` values in JSON schema.
+
+### Usage
 
 ```javascript
 var refpath = require('refpath');
 
-var json = {
+var obj = {
     'p1': {
         'p1a': 'v1a'
     },
@@ -18,12 +20,12 @@ var json = {
 
 //Get
 
-refpath.get(json, '#/p1/p1a'); // 'v1a'
-refpath.get(json, '#/p2/0'); // 0
+refpath.get(obj, '#/p1/p1a'); // 'v1a'
+refpath.get(obj, '#/p2/0'); // 0
 
 //Set
 
-refpath.set(json, '#/p1/p1a', 'v1b');
+refpath.set(obj, '#/p1/p1a', 'v1b');
 
-refpath.get(json, '#/p1/p1a'); // 'v1b'
+refpath.get(obj, '#/p1/p1a'); // 'v1b'
 ```

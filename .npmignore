@@ -25,6 +25,7 @@
 work
 build
 test
+benchmark
 pids
 logs
 results
