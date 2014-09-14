@@ -12,7 +12,7 @@ var obj = {
 };
 
 hammer({
-    iterations: 1000,
+    iterations: 10000,
     after: function (results) {
         console.log('%d operations/sec', results.ops);
     }
