@@ -39,13 +39,16 @@ test('refpath', function (t) {
     });
 
     t.test('set', function (t) {
-        t.plan(2);
+        t.plan(3);
 
         refpath.set(obj, '#/p4/1/p4b', 'v4c');
         t.strictEqual(refpath.get(obj, '#/p4/1/p4b'), 'v4c', 'key value changed');
 
         refpath.set(obj, '#/p3/0', 'v3c');
         t.strictEqual(refpath.get(obj, '#/p3/0'), 'v3c', 'index value changed');
+
+        refpath.set(obj, '#/p1/p1e/p1e1', 'x');
+        t.ok(!refpath.get(obj, '#/p1/p1e/p1e1'), 'did not set non existent.');
     });
 
 });
