@@ -29,9 +29,8 @@ test('refpath', function (t) {
     };
 
     t.test('get', function (t) {
-        t.plan(6);
+        t.plan(5);
 
-        t.ok(!refpath.get(obj, '/p2'), 'no # to refer to object');
         t.ok(refpath.get(obj, '#'), '# returns object.');
         t.strictEqual(refpath.get(obj, '#/p1/p1a'), 'v1a', 'gets by keys');
         t.strictEqual(refpath.get(obj, '#/p4/1/p4b'), 'v4b', 'gets by index');
