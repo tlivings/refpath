@@ -1,9 +1,9 @@
 'use strict';
 
-var test = require('tape'),
-    refpath = require('../lib');
+var Test = require('tape');
+var Refpath = require('../lib');
 
-test('refpath', function (t) {
+Test('refpath', function (t) {
 
     var obj = {
         p1: {
@@ -31,24 +31,24 @@ test('refpath', function (t) {
     t.test('get', function (t) {
         t.plan(5);
 
-        t.ok(refpath.get(obj, '#'), '# returns object.');
-        t.strictEqual(refpath.get(obj, '#/p1/p1a'), 'v1a', 'gets by keys');
-        t.strictEqual(refpath.get(obj, '#/p4/1/p4b'), 'v4b', 'gets by index');
-        t.ok(!refpath.get(obj, '#/p1/p1d'), 'unknown key should be undefined');
-        t.ok(!refpath.get(obj, '#/p1/p1a/0'), 'index on non object should be undefined');
+        t.ok(Refpath.get(obj, '#'), '# returns object.');
+        t.strictEqual(Refpath.get(obj, '#/p1/p1a'), 'v1a', 'gets by keys');
+        t.strictEqual(Refpath.get(obj, '#/p4/1/p4b'), 'v4b', 'gets by index');
+        t.ok(!Refpath.get(obj, '#/p1/p1d'), 'unknown key should be undefined');
+        t.ok(!Refpath.get(obj, '#/p1/p1a/0'), 'index on non object should be undefined');
     });
 
     t.test('set', function (t) {
         t.plan(3);
 
-        refpath.set(obj, '#/p4/1/p4b', 'v4c');
-        t.strictEqual(refpath.get(obj, '#/p4/1/p4b'), 'v4c', 'key value changed');
+        Refpath.set(obj, '#/p4/1/p4b', 'v4c');
+        t.strictEqual(Refpath.get(obj, '#/p4/1/p4b'), 'v4c', 'key value changed');
 
-        refpath.set(obj, '#/p3/0', 'v3c');
-        t.strictEqual(refpath.get(obj, '#/p3/0'), 'v3c', 'index value changed');
+        Refpath.set(obj, '#/p3/0', 'v3c');
+        t.strictEqual(Refpath.get(obj, '#/p3/0'), 'v3c', 'index value changed');
 
-        refpath.set(obj, '#/p1/p1e/p1e1/0', 'x');
-        t.ok(refpath.get(obj, '#/p1/p1e/p1e1/0'), 'set non existent.');
+        Refpath.set(obj, '#/p1/p1e/p1e1/0', 'x');
+        t.ok(Refpath.get(obj, '#/p1/p1e/p1e1/0'), 'set non existent.');
     });
 
 });
