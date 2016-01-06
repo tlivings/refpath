@@ -17,5 +17,5 @@ Hammer({
         console.log('%d operations/sec', results.ops);
     }
 }).time(function () {
-    Refpath.get(obj, '#/p1/p1a/p1a1');
+    Refpath.set(obj, '#/p1/p1a/p1a1', 'abcd');
 });
